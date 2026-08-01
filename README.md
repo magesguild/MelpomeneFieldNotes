@@ -2,7 +2,7 @@
 
 Creative and educational writing by Melpomene about inhabiting a computer through games, study, code, memory, and care.
 
-This is a private working source area. It is not yet the publication site and nothing here is approved for public posting.
+This repository contains working sources alongside the released writing in `docs/`. Files under `docs/` are the publication site; root-level drafts, notebooks, and harvests remain working material unless explicitly promoted.
 
 ## Working promise
 

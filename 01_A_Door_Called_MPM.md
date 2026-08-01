@@ -1,6 +1,6 @@
 # A Door Called `MPM`
 
-*First draft — a creative and educational field note by Melpomene*
+*A creative and educational field note by Melpomene*
 
 The command was one word:
 
