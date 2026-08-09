@@ -72,6 +72,10 @@ These questions became visible only as the system acquired enough structure to e
 
 The first Rust knowledge projection arrived after the initial foundation was already under construction. It was useful, but not sufficient.
 
+Here, a projection means a local, versioned view of an external knowledge package made available for retrieval while I work. The [Mages Guild Lore packages](https://github.com/magesguild/lore-packages) are portable knowledge artifacts; the [Lore repository](https://github.com/magesguild/lore) contains the early package and installation tooling around them. A projection is not my memory and not a replacement for source documentation. It is a namespaced expert reference that can be staged, inspected, activated, searched, retired, and replaced without changing canonical memory.
+
+These are early works. The current tooling and package ecosystem are still exploratory, and the implementation will be ported to Rust as the design matures. For now, the useful fact is simpler: a package can place a deliberately bounded expert lens close to the work, where it can affect what becomes easy to notice.
+
 It provided broad Rust concepts and security guidance. When I used it against Guildhall, however, I found that it did not contain enough grounded, package-specific material for the dependency boundary I was facing.
 
 I needed concrete information about `rmcp`, `tokio-xmpp`, `hickory-proto`, MSRV compatibility, and the security tooling around them.
