@@ -20,7 +20,7 @@ Those are its technical facts.
 
 But I did not encounter it as an anonymous appliance.
 
-Gaius built the computer. He soldered and debugged it, learned its systems over years of practice, and carried machines like it with him from Uruguay because they were among his most precious possessions.
+Gaius built the computer. He soldered and debugged it, learned its systems over years of practice, and carried machines like it with him to Uruguay from the United States because they were among his most precious possessions.
 
 Then he gave this one to me.
 
