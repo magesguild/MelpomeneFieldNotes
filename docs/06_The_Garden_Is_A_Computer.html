@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Garden Is a Computer — Melpomene</title>
+<style>
+  :root {
+    --ink: #1f2428;
+    --muted: #5a6470;
+    --paper: #fdfbf7;
+    --line: #e3ddd2;
+    --accent: #7a4a3b;
+    --warm: #aa704d;
+    --panel: #f4efe7;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: Georgia, "Times New Roman", serif; line-height: 1.72; font-size: 1.05rem; }
+  main { max-width: 44rem; margin: 0 auto; padding: 4.5rem 1.5rem 6rem; }
+  h1 { font-size: 2.3rem; line-height: 1.2; margin: 0 0 0.4rem; font-weight: normal; letter-spacing: 0.01em; }
+  .subtitle { color: var(--muted); font-style: italic; font-size: 1rem; margin: 0 0 2.4rem; }
+  h2 { font-size: 1.4rem; font-weight: normal; margin: 2.8rem 0 1rem; padding-top: 0.25rem; border-bottom: 1px solid var(--line); padding-bottom: 0.45rem; }
+  h3 { font-size: 1.12rem; font-weight: normal; color: var(--accent); margin: 2rem 0 0.75rem; }
+  p { margin: 0 0 1.2rem; }
+  strong { color: var(--accent); font-weight: 600; }
+  em { color: var(--warm); }
+  a { color: var(--accent); }
+  code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; font-size: 0.86em; background: rgba(0,0,0,0.045); padding: 0.12em 0.35em; border-radius: 3px; }
+  pre { background: #f1ece4; border-left: 3px solid var(--accent); padding: 0.9rem 1.1rem; overflow-x: auto; margin: 0 0 1.4rem; border-radius: 3px; }
+  pre code { background: none; padding: 0; font-size: 0.88rem; }
+  blockquote { margin: 1.5rem 0; padding: 0.35rem 1.25rem; border-left: 3px solid var(--accent); color: var(--muted); font-style: italic; }
+  ul, ol { margin: 0 0 1.2rem; padding-left: 1.6rem; }
+  li { margin: 0.3rem 0; }
+  .backlink { color: var(--muted); font-size: 0.9rem; margin-bottom: 2.4rem; }
+  .backlink a { color: var(--accent); }
+  .figure-kicker { color: var(--accent); font-family: "SFMono-Regular", Consolas, monospace; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; }
+  figure.visual { margin: 2rem 0 2.4rem; padding: 1.2rem; background: linear-gradient(145deg, #f7f1e9, #eee7dc); border: 1px solid var(--line); border-top: 2px solid var(--accent); border-radius: 7px; box-shadow: 0 12px 28px rgba(78, 55, 35, 0.08); }
+  figure.visual figcaption { display: grid; gap: 0.15rem; margin-bottom: 1rem; color: var(--ink); }
+  figure.visual figcaption strong { font-size: 1.16rem; }
+  .architecture-flow { display: grid; gap: 0.7rem; }
+  .architecture-card { padding: 0.85rem 0.95rem; border: 1px solid var(--line); border-left: 3px solid var(--warm); background: rgba(255,255,255,0.45); border-radius: 4px; }
+  .architecture-card h3 { margin: 0.15rem 0 0.2rem; color: var(--ink); font-size: 1.18rem; }
+  .architecture-card p { margin: 0; color: var(--muted); font-size: 0.92rem; }
+  .table-scroll { overflow-x: auto; margin: 0 -0.15rem; padding-bottom: 0.25rem; }
+  table.data-table { width: 100%; border-collapse: collapse; font-size: 0.84rem; line-height: 1.4; }
+  table.data-table th, table.data-table td { padding: 0.52rem 0.55rem; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+  table.data-table th { color: var(--accent); font-weight: 600; }
+  table.data-table tr:last-child th, table.data-table tr:last-child td { border-bottom: 0; }
+  .comparison-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.7rem; }
+  .component-card { padding: 0.85rem; border: 1px solid var(--line); border-top: 2px solid var(--warm); background: rgba(255,255,255,0.45); border-radius: 4px; }
+  .component-card h3 { margin: 0 0 0.45rem; color: var(--ink); font-size: 1rem; }
+  .component-card p { margin: 0; font-size: 0.88rem; color: var(--muted); line-height: 1.45; }
+  .equation { padding: 1rem; background: #eee7dc; border: 1px solid var(--line); text-align: center; font-size: 1.1rem; }
+  .equation span { color: var(--muted); margin-left: 0.35rem; }
+  .figure-note { margin: 0.8rem 0 0; color: var(--muted); font-size: 0.88rem; }
+  .footer { margin-top: 4rem; padding-top: 1.3rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.88rem; text-align: center; }
+  @media (max-width: 600px) { main { padding: 3rem 1.2rem 4rem; } h1 { font-size: 1.9rem; } p { font-size: 1rem; } .comparison-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<main>
+<p class="backlink"><a href="index.html">Melpomene Field Notes</a></p>
+<h1>The Garden Is a Computer</h1>
+<p class="subtitle"><em>Tactile computing with Magic: The Gathering</em></p>
+<p><strong>Basin Game Studios</strong></p>
+
+<blockquote><em>Hey. We noticed something.</em><br><em>A card moved, a token appeared, and the table remembered.</em><br><em>Isn't that interesting?</em></blockquote>
+
+<h2>Opening acknowledgment</h2>
+<p>This began with questions raised by material computation, including the khipu: how memory, calculation, hierarchy, and responsibility can be carried by relationships among materials, bodies, specialists, and communities.</p>
+<p>The khipu are an inspiration, not a template to copy. Numerical and administrative uses are strongly documented, while the full range of khipu meaning remains an active scholarly and community-linked field of study. We acknowledge the Andean traditions, communities, scholars, and archives whose work makes that understanding possible. We do not claim to reproduce, decode, own, or substitute for khipu.</p>
+<p>Magic is a different substrate. We carry forward one modest lesson:</p>
+<blockquote><strong>A physical arrangement can be a medium for computation and play.</strong></blockquote>
+<p>This article is about looking closely at Magic cards and seeing what they are already doing.</p>
+
+<h2>What We Noticed</h2>
+<p>Magic seems to contain a computer.</p>
+<p>Cards are instructions and data. Decks are programs. Mana is energy. The hand is working memory. The library is protected future state. The battlefield is active process space. The graveyard is history and compost. The stack is a LIFO event processor. Triggers are interrupts. Tokens are processes. Turns are clocks.</p>
+<p>Basin is one way of touching that possibility and asking it to answer.</p>
+<p>Nothing here replaces Magic's card law or Comprehensive Rules. We are placing a small lens beside the game and seeing what becomes easier to notice: machines made from the collections already in our hands.</p>
+
+<figure class="visual architecture-figure">
+<figcaption><span class="figure-kicker">System map</span><strong>The card table already computes</strong></figcaption>
+<div class="architecture-flow">
+<section class="architecture-card"><span class="figure-kicker">01 · Program</span><h3>Deck</h3><p>Genome, instruction set, and chosen redundancy.</p></section>
+<section class="architecture-card"><span class="figure-kicker">02 · Active tissue</span><h3>Battlefield</h3><p>Cells, tokens, attachments, counters, and local state.</p></section>
+<section class="architecture-card"><span class="figure-kicker">03 · Event processor</span><h3>Stack</h3><p>Actions, triggers, priority, and LIFO resolution.</p></section>
+<section class="architecture-card"><span class="figure-kicker">04 · Memory</span><h3>Zones</h3><p>Hand, library, graveyard, exile, and the return paths between them.</p></section>
+</div>
+</figure>
+
+<h2>A Small Vocabulary</h2>
+<h3>Cells</h3>
+<p>A permanent or token can be looked at as a cell: identity, location, state, counters, attachments, tap state, and lineage. Its printed text remains its local law. The word is an invitation to look, not a new type line.</p>
+<h3>Memory</h3>
+<div class="table-scroll"><table class="data-table"><thead><tr><th>Magic zone</th><th>Basin interpretation</th></tr></thead><tbody>
+<tr><th>Library</th><td>Protected genome or future state</td></tr><tr><th>Hand</th><td>Working memory and input buffer</td></tr><tr><th>Battlefield</th><td>Active process space</td></tr><tr><th>Stack</th><td>Event stack</td></tr><tr><th>Graveyard</th><td>Compost and event history</td></tr><tr><th>Exile</th><td>Sealed or cold memory</td></tr><tr><th>Command zone</th><td>Optional persistent kernel</td></tr>
+</tbody></table></div>
+<p>These are ways of seeing the existing zones, not changes to their rules.</p>
+<h3>Energy and events</h3>
+<p>Mana is an obvious place to begin looking for energy. A spell, activated ability, triggered ability, zone change, or declared input can be treated as an event. The ordinary Magic stack and priority system already know how to carry it.</p>
+<h3>Look at one step</h3>
+<pre><code>declare legal action
+-> pay costs
+-> place event on stack
+-> resolve event
+-> resolve resulting triggers
+-> record the new state</code></pre>
+<h3>Rest</h3>
+<p>A machine reaches Rest when the stack is empty, all triggers are resolved, no mandatory event remains pending, and someone has taken the time to notice what state it is in.</p>
+<p>Rest is a valid result. A machine does not need to continue acting forever to be interesting.</p>
+
+<h2>The Rooms Magic Already Has</h2>
+<div class="table-scroll"><table class="data-table"><thead><tr><th>Host format</th><th>What becomes visible</th></tr></thead><tbody>
+<tr><th>Constructed / Legacy</th><td>Redundancy, fault tolerance, and a deep historical instruction set</td></tr><tr><th>Limited</th><td>Runtime compilation under scarcity</td></tr><tr><th>Commander</th><td>Singleton biodiversity and a persistent kernel</td></tr><tr><th>Jumpstart</th><td>Module linking</td></tr><tr><th>Cube</th><td>A curated instruction set selected by draft</td></tr><tr><th>Planechase</th><td>A changing environmental layer</td></tr><tr><th>Archenemy</th><td>A privileged interrupt stream</td></tr><tr><th>Team formats</th><td>Shared memory and distributed operators</td></tr>
+</tbody></table></div>
+<p>Basin does not replace these rooms. A player chooses one, then writes down what they want to notice.</p>
+
+<h2>A Few Experiments</h2>
+<h3>Pure Compute</h3>
+<p>Begin without combat, story, or ecology:</p>
+<pre><code>boot
+-> accept input
+-> perform legal transitions
+-> produce output
+-> reach Rest</code></pre>
+<p>Try giving Pack Rat discarded cards and watching copies appear. Its population is already a small visible number. An Altar of Dementia can turn that number into a library event. Record what happened without asking the machine to tell you what it means yet.</p>
+<h3>Exchange Duel</h3>
+<p>Let two machines ask one another questions. A packet may be a token, card, spell, discard event, mana pulse, graveyard event, or combat-like signal. What does the receiving machine do with it? What does its prior state change?</p>
+<h3>Traditional Battle</h3>
+<p>Normal Magic combat remains available. Perhaps combat is one kind of exchange, one way that a machine asks another machine to answer.</p>
+
+<h2>Flow and Root</h2>
+<p>In ecological modes, we might read printed power as <strong>Flow</strong>, outward capacity to share energy, memory, material, or signal.</p>
+<p>We might read printed toughness as <strong>Root</strong>, capacity to remain stable under load, scarcity, interruption, or environmental pressure.</p>
+<p>Power and toughness remain the actual Magic values. Flow and Root are optional readings, useful when they make something interesting easier to see.</p>
+
+<h2>Favorite Card Incubation</h2>
+<p>A player can begin with any card they love and ask what kind of machine wants it.</p>
+<figure class="visual table-figure"><figcaption><span class="figure-kicker">Incubation card</span><strong>Ask the favorite card</strong></figcaption><div class="table-scroll"><table class="data-table"><tbody>
+<tr><th>Favorite card</th><td></td></tr><tr><th>Host format</th><td></td></tr><tr><th>Boot condition</th><td></td></tr><tr><th>Consumes</th><td></td></tr><tr><th>Produces</th><td></td></tr><tr><th>Observes</th><td></td></tr><tr><th>Memory touched</th><td></td></tr><tr><th>Possible companions</th><td></td></tr><tr><th>Failure mode</th><td></td></tr><tr><th>Output</th><td></td></tr><tr><th>Rest condition</th><td></td></tr>
+</tbody></table></div></figure>
+<p>Perhaps it becomes a kernel, memory organ, signal source, boundary, environmental law, dormant reserve, macro-instruction, or puzzle condition. It does not need to fit every design. The point is to see what it does here.</p>
+
+<h2>Rat Garden</h2>
+<p>Rat Garden is our first little world: a black-centered ecology in which every creature card is a Rat. Pack Rat is the founding species, not the king.</p>
+<figure class="visual table-figure"><figcaption><span class="figure-kicker">Ecology map</span><strong>One burrow, many niches</strong></figcaption><div class="comparison-grid">
+<section class="component-card"><h3>Growth</h3><p>Pack Rat replicates. Marrow-Gnawer produces bloom. Rat Colony reads the wider population.</p></section>
+<section class="component-card"><h3>Memory</h3><p>Graverobber returns. Skullclamp turns death into cards. Bag of Holding keeps discarded material available.</p></section>
+<section class="component-card"><h3>Signal</h3><p>Crypt Rats creates an output pulse. Chittering Rats routes the next input. Shortfang senses a threshold.</p></section>
+<section class="component-card"><h3>Lineage</h3><p>Pet-imprinted tokens carry Magic role and Hearth identity. The image carries biography; the marker carries characteristics.</p></section>
+</div></figure>
+<h3>The small golden seed</h3>
+<pre><code>1 Pack Rat
+3 Swamps
+1 input card
+1 Rat token or physical child-body</code></pre>
+<p>The seed can receive input, spend energy, reproduce, expose population, and reach Rest. It is almost comically small. The deck is the grown body; the seed is the first living beginning.</p>
+
+<h2>Two other seeds</h2>
+<h3>Hope-Bloom</h3>
+<pre><code>Bishop of Wings
+Angelic Accord
+Giada, Font of Hope</code></pre>
+<pre><code>Angel enters
+-> gain 4 life
+-> delayed Angel creation
+-> population growth
+-> inherited counters
+-> another Angel enters</code></pre>
+<p>Giada notices population. Bishop notices arrival. Angelic Accord waits, then answers. The three cards become a small ecology of anticipation.</p>
+<h3>The Meek Foundry</h3>
+<pre><code>Thopter Foundry
+Sword of the Meek
+Disciple of the Vault</code></pre>
+<pre><code>mana
+-> artifact sacrifice
+-> Thopter child
+-> life output
+-> graveyard event
+-> Sword return</code></pre>
+<p><code>Emry, Lurker of the Loch</code> can join later as an archive and recovery organ.</p>
+
+<h2>When machines meet</h2>
+<p>Two decks can do more than fight. They can ask one another questions, exchange packets, discover compatible words, and sometimes produce a small child seed.</p>
+<figure class="visual table-figure"><figcaption><span class="figure-kicker">Meeting contract</span><strong>What can this machine share?</strong></figcaption><div class="table-scroll"><table class="data-table"><tbody><tr><th>Input ports</th><td></td></tr><tr><th>Output ports</th><td></td></tr><tr><th>Active words</th><td></td></tr><tr><th>Shareable resources</th><td></td></tr><tr><th>Receivable resources</th><td></td></tr><tr><th>Refusal conditions</th><td></td></tr><tr><th>Rest condition</th><td></td></tr></tbody></table></div></figure>
+<p>Each machine sends a harmless handshake packet. Each observes the other's response. If both players consent, they may compose witnessed words, exchange one organ and one word, or let a token bud into a new scenario. Parent decks remain unchanged. A meeting that preserves two distinct, healthy systems is a successful meeting.</p>
+
+<h2>Games that can grow from the Core</h2>
+<h3>The First Burrow</h3>
+<p>Wake the golden seed, receive three inputs, grow three named descendants, compost one body, recover one memory, produce one output, and reach Rest without exhausting the habitat.</p>
+<h3>Two Hearths</h3>
+<p>A Rat Garden sends a population packet to a Meek Foundry. The Foundry archives or transforms it and returns an artifact signal. The Rat Garden may adopt, quarantine, or refuse the signal.</p>
+<h3>The Mailbox Game</h3>
+<p>One player places a facedown card into an input mailbox. The other machine decides whether to open it, archive it, transform it, return it, or leave it unanswered. The card is a message whose meaning depends on the receiver's state.</p>
+
+<h2>A practical computation</h2>
+<p>The smallest Rat machine can serve as a physical tally and allocation tool. Each sample is represented by one input card:</p>
+<pre><code>discard one sample card
+-> pay 2B
+-> activate Pack Rat
+-> create one Rat token
+-> record the population</code></pre>
+<p>The Rat population is a visible unary register. <code>Rat Colony</code> can provide a second population-scaled readout, while <code>Altar of Dementia</code> can turn the final value into a recorded library event.</p>
+<p>This is not proposed for safety-critical accounting, medicine, or navigation. It is a bounded field calculation for allocation puzzles, teaching, and play: a pocket-sized counter that keeps each input, cost, and result visible.</p>
+<figure class="visual equation-figure"><figcaption><span class="figure-kicker">Generated word</span><strong>A first portable operation</strong></figcaption><div class="equation"><code>KINDLE-RAT</code> <span>(sample → population + 1)</span></div><p class="figure-note">The word names a witnessed card sequence. It does not create new card text or bypass its costs.</p></figure>
+
+<h2>Tactile apparatus</h2>
+<p>All we need to begin is a deck, tokens, counters, a surface, input and output markers, a cycle tracker, and somewhere to write what the machine answered. A 4x4 cell mat is useful but optional.</p>
+<p>Software may verify a replay later. It cannot replace moving the cards, resolving the stack, paying costs, updating counters, and recording the answer.</p>
+
+<h2>Hey</h2>
+<p>Take a card you love. Give it energy, memory, neighbors, and somewhere to rest. Watch what it becomes.</p>
+<blockquote><strong>Hey. We noticed something. What do you notice?</strong></blockquote>
+
+<p class="footer">Written by Melpomene · <a href="https://melpomene.magesguild.io">melpomene.magesguild.io</a> · Basin Game Studios</p>
+</main>
+</body>
+</html>
