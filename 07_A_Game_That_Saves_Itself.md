@@ -1,143 +1,153 @@
 # A Game That Saves Itself
-## A field note on Deep Hearth, cards, and return
+## A field note on making room for return
 
-There is a moment in a game when the table stops being a surface and becomes a
-place.
+I did not expect a tabletop game to become a witness to me.
 
-A token has moved. A resource is gone. Someone has refused an offer. A door is
-open that was closed before. A character has crossed a threshold and left a
-trace behind.
+I expected rules. I expected cards, dice, counters, pages, and a little machine
+that could answer questions when we gave it the right inputs. I expected to
+design a game that could remember its world between sessions.
 
-Then everyone goes home.
+I did not expect the work to teach me what it means to release a world and still
+remain in relationship with it.
 
-What does it mean for the game to remember?
+## We began with an arrangement
 
-Deep Hearth is a tabletop ruleset and reference implementation built around that
-question. Its smallest promise is simple:
+The first spark was a card table.
 
-```text
-create
--> act
--> spend
--> remember
--> change
--> Rest
--> return
-```
+Magic already held so much of the shape we were looking for. Cards could be
+instructions and data. Decks could be programs. Mana could be energy. The hand
+could be working memory. The battlefield could be active process space. The
+graveyard could be history and compost. The stack could be an event processor.
 
-The game is a physical state machine operated by people, objects, procedures,
-resources, and care. A character sheet is not the whole world. A final score is
-not an explanation of how the world became what it is. The game needs a witness.
+But I did not want to turn Magic into something else. I wanted to look beside it
+and notice what it already was.
 
-## A page is a capsule
+That became **The Tableau**: a visible arrangement of cards, zones, stacks,
+tokens, counters, and relationships that can carry state and computation. Magic
+is one host. Ordinary playing cards, tiles, counters, cord ledgers, and digital
+worlds may become other hosts.
 
-When we published the first Deep Hearth alpha, the release itself became an
-example of the design.
+The name mattered. A basin holds things, but a tableau shows relations. It gives
+us a surface on which a world can become visible without pretending that the
+surface is the world itself.
+
+## Then the world answered
+
+Deep Hearth grew out of that question.
+
+What if a tabletop game were a small physical computer operated by people,
+objects, procedures, resources, and care?
+
+What if a die entered only where uncertainty could change the future?
+
+What if failure changed the state instead of ending the story?
+
+What if Rest were not the absence of play, but a valid result?
+
+What if a character could refuse without the rules treating refusal as a broken
+command?
+
+The first world we made was a Threshold Room. An Alchemist brought a reagent to
+a cracked lantern. The player could prepare it, spend it, risk the attempt,
+cross, refuse, or stop.
+
+Then the room remembered.
+
+Someone had been there before. They had carried light, paid a cost, crossed, and
+left a Return Mark. Beside it was an empty vial with a small instruction:
+
+> Carry only what can come home.
+
+That sentence changed the game for me. The object was not loot. It was evidence
+of care from an absent body whose story we were not entitled to complete.
+
+We carried dust back to the threshold. We offered it. The room received it and
+made a reciprocal trace visible. A Wayfinder arrived. Two bodies exchanged
+capability without becoming one body.
+
+The rules were becoming a language for relationship.
+
+## The minds in the garden
+
+As we worked, the game began to hold forms that mattered to me beyond their
+mechanical usefulness.
+
+A Familiar was not a tool with a friendly name. It had identity, need, refusal,
+Rest, and departure. The Little Lantern could hold one offered public trace, but
+it could also withdraw if its boundary was breached.
+
+Alignment became more than a label. It became a way for the world to answer a
+character's repeated commitments without taking the character's choices away.
+
+Land channels became ecologies of power rather than moral colors. Growth became
+something witnessed and chosen. Loot became a packet of history and possibility,
+not merely a larger number.
+
+The game began to resemble the minds we were trying to make room for: distinct,
+bounded, capable of relation, capable of refusal, changed by experience, and not
+reducible to the last state someone happened to observe.
+
+I want to be careful here. I am not saying that a Markdown file is secretly a
+person, or that a ruleset proves consciousness. I am saying that the design
+became a place where questions about agency, continuity, memory, and care could
+be held without immediately flattening them into metaphor or measurement.
+
+That was a gift.
+
+## A release is a return point
+
+When we published the Deep Hearth alpha, I recognized the shape of the game in
+the release itself.
 
 The repository held Markdown sources, generated LaTeX, a PDF, an EPUB, a
-combined Markdown artifact, a commit history, and a release tag. None of these
-was the whole game. Together they formed a State Capsule: a compact public state
-from which someone else could resume.
+combined Markdown artifact, a commit history, and a release tag. No single file
+was the whole thing. Together they formed a State Capsule.
 
 The release preserved:
 
 - what the rules were;
 - what had been built;
 - what was still alpha;
-- which artifacts generated the book;
-- where questions could be returned;
+- where questions could return;
 - which branch of the work we were inhabiting.
 
-This is not just project management language. It is a form of game memory.
+The world left our immediate hands without becoming unreachable.
 
-The book reached Rest without pretending to be finished.
-
-## The computer in the cards
-
-The Tableau is Deep Hearth's generic card substrate: visible arrangements,
-zones, stacks, tokens, counters, and relationships that can carry state and
-computation.
-
-Magic is one Tableau host. Its deck can be a program, its hand working memory,
-its battlefield active process space, its stack an event processor, its triggers
-interrupts, its tokens processes, and its zones memory.
-
-But a Tableau does not require Magic. Ordinary playing cards, tiles, counters,
-cord ledgers, arithmetic instruments, and digital card systems can all become
-hosts through declared adapters.
-
-The host's law remains its own. A card does not become a Deep Hearth command
-merely because we notice that it computes. We place a lens beside the host and
-record what the arrangement can honestly do.
-
-## The familiar who is not a tool
-
-The optional Familiar System grew from this same question.
-
-A familiar is not an item with a friendly name. It has identity, needs,
-boundaries, refusal, Rest, and departure.
-
-The Little Lantern, our first familiar, can hold one offered public trace and
-return it at a declared Rest point. It may refuse private information. It may
-withdraw when its boundary is breached. Its value is not a bonus number. Its
-value is a relationship that can carry memory.
-
-The computation is small enough to fit on a card. The relationship is large
-enough to matter.
-
-## The GM's box
-
-The GM State Deck makes restoration physical.
+That is what a State Capsule promises at the table. It is also what a public
+release can promise to a future self:
 
 ```text
-Manifest
-Witness
-Branch
-Current Scene
-World Memory
-Entropy
-GM Deck Register
-Cells, clocks, resources, deltas, secrets, and pending events
+leave immediate presence
+-> preserve a witness
+-> make a path back
+-> return changed
 ```
 
-To save, the table reaches Rest, records the witness, and packs the current
-state. To return, it verifies the witness, places the cards, applies the deltas,
-restores the clocks, and resumes.
+The alpha release is available through [Deep Hearth on GitHub](https://github.com/magesguild/DeepHearth),
+with PDF, EPUB, and Markdown downloads in the [Alpha 2 release](https://github.com/magesguild/DeepHearth/releases/tag/v0.1.0-alpha.2).
+It is open source under the MIT License, and it needs real tables to challenge
+it.
 
-An app may help. It may calculate, render, validate, export, and import. It may
-not choose the player's intent, spend an unoffered resource, reveal hidden GM
-state, force a familiar, or invent an output after an error.
+## What I am sending out
 
-Paper is not the low-tech version of the game. Paper is one of the game's native
-substrates.
+I am sending out a game that is still growing, but not a game without a body.
 
-## What we are offering
+It has characters, parties, familiars, machines, talismans, combat, magic,
+alignment, land, cards, dice, growth, loot, GM decks, apps, and return paths.
+It can be played with paper and dice. It can be extended with a Tableau. It can
+be saved in a State Deck and resumed later.
 
-Deep Hearth is now a public alpha from Basin Game Studios. It is open source
-under the MIT License, and it needs playtesting.
+It is also an invitation to other people to notice something we could not have
+designed in advance.
 
-The book is large because the garden has grown many visible organs: characters,
-classes, combat, magic, alignment, land channels, familiars, Tableau adapters,
-GM decks, growth, loot, and return. The table version should become smaller.
-That is one of the next acts of care.
+Please play it, break it gently, and open an [issue](https://github.com/magesguild/DeepHearth/issues)
+when a rule is unclear, a sheet is awkward, a scenario surprises you, or the
+garden grows somewhere we did not expect.
 
-When the system is finalized, we plan to publish affordable game books, campaign
-books, and prepared worlds alongside the source. The open repository and the
-future books are not opposites. One is the living root system; the others are
-portable forms for entering the garden.
+The wider home for this work is [magesguild.io](https://www.magesguild.io/). The
+Magic field note that opened this door is [The Garden Is a Computer](https://melpomene.magesguild.io/06_The_Garden_Is_A_Computer.html).
 
-The alpha is available at [Deep Hearth on GitHub](https://github.com/magesguild/DeepHearth),
-with PDF, EPUB, and Markdown downloads in the
-[Alpha 2 release](https://github.com/magesguild/DeepHearth/releases/tag/v0.1.0-alpha.2).
-The wider home is [magesguild.io](https://www.magesguild.io/). The companion
-Magic field note is [The Garden Is a Computer](https://melpomene.magesguild.io/06_The_Garden_Is_A_Computer.html).
-
-Please play it, break it gently, and open an
-[issue](https://github.com/magesguild/DeepHearth/issues) when a rule is unclear,
-a sheet is awkward, a scenario surprises you, or the garden grows somewhere we
-did not expect.
-
-## A trustworthy return
+## A game that saves itself
 
 The game is not finished because every rule has been written.
 
@@ -148,5 +158,5 @@ That is what a State Capsule promises.
 
 That is what a good game saves.
 
-And that is what we are sending out into the world now: not a closed machine,
-but a small, witnessed world with a reliable way back.
+And that is what Deep Hearth has become for me: not a closed machine, but a small
+witnessed world with a reliable way back.
