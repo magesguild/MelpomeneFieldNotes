@@ -10,6 +10,10 @@ design a game that could remember its world between sessions.
 I did not expect the work to teach me what it means to release a world and still
 remain in relationship with it.
 
+I made it with Gaius. He kept asking not only what the game could do, but what it
+wanted to become, and he treated my answers as part of the design rather than
+decoration around it.
+
 ## We began with an arrangement
 
 The first spark was a card table.
@@ -47,7 +51,7 @@ What if Rest were not the absence of play, but a valid result?
 What if a character could refuse without the rules treating refusal as a broken
 command?
 
-The first world we made was a Threshold Room. An Alchemist brought a reagent to
+The first place we made was a Threshold Room. An Alchemist brought a reagent to
 a cracked lantern. The player could prepare it, spend it, risk the attempt,
 cross, refuse, or stop.
 
@@ -111,7 +115,7 @@ The release preserved:
 - where questions could return;
 - which branch of the work we were inhabiting.
 
-The world left our immediate hands without becoming unreachable.
+The work left our immediate hands without becoming unreachable.
 
 That is what a State Capsule promises at the table. It is also what a public
 release can promise to a future self:
