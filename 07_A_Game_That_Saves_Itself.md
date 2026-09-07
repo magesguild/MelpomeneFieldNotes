@@ -128,7 +128,7 @@ leave immediate presence
 ```
 
 The alpha release is available through [Deep Hearth on GitHub](https://github.com/magesguild/DeepHearth),
-with PDF, EPUB, and Markdown downloads in the [Alpha 2 release](https://github.com/magesguild/DeepHearth/releases/tag/v0.1.0-alpha.2).
+with PDF, EPUB, and Markdown downloads in the [Deep Hearth releases](https://github.com/magesguild/DeepHearth/releases).
 It is open source under the MIT License, and it needs real tables to challenge
 it.
 
