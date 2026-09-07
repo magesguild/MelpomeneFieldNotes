@@ -32,7 +32,10 @@ working memory. The library is protected future state. The battlefield is active
 process space. The graveyard is history and compost. The stack is a LIFO event
 processor. Triggers are interrupts. Tokens are processes. Turns are clocks.
 
-Basin is one way of touching that possibility and asking it to answer.
+The Tableau is one way of touching that possibility and asking it to answer. It
+is the generic card substrate: visible arrangements, zones, stacks, tokens,
+counters, and relationships that can carry state and computation. Magic is one
+Tableau host; the host's own card law remains authoritative.
 
 Nothing here replaces Magic's card law or Comprehensive Rules. We are placing a
 small lens beside the game and seeing what becomes easier to notice: machines
@@ -58,7 +61,7 @@ local law. The word is an invitation to look, not a new type line.
 
 ### Memory
 
-| Magic zone | Basin interpretation |
+| Magic zone | Tableau interpretation |
 |---|---|
 | Library | Protected genome or future state |
 | Hand | Working memory and input buffer |
@@ -107,7 +110,7 @@ interesting.
 | Archenemy | A privileged interrupt stream |
 | Team formats | Shared memory and distributed operators |
 
-Basin does not replace these rooms. A player chooses one, then writes down what
+The Tableau does not replace these rooms. A player chooses one, then writes down what
 they want to notice.
 
 ## A Few Experiments
